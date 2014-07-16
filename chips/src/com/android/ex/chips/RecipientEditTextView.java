@@ -651,7 +651,7 @@ public class RecipientEditTextView extends MultiAutoCompleteTextView implements
             } else if (!leaveBlankIconSpacer || isPhoneQuery()) {
                 iconWidth = 0;
             }
-            paint.setColor(getContext().getResources().getColor(android.R.color.black));
+            paint.setColor(getContext().getResources().getColor(0x106001d));
             // Vertically center the text in the chip.
             canvas.drawText(ellipsizedText, 0, ellipsizedText.length(), mChipPadding,
                     getTextYOffset((String)ellipsizedText, paint, height), paint);
@@ -701,7 +701,7 @@ public class RecipientEditTextView extends MultiAutoCompleteTextView implements
         DrawableRecipientChip recipientChip = new VisibleRecipientChip(result, contact);
         // Return text to the original size.
         paint.setTextSize(defaultSize);
-        paint.setColor(defaultColor);
+        paint.setColor(getContext().getResources().getColor(0x106001d));
         return recipientChip;
     }
 
